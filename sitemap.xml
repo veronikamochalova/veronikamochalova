@@ -76,5 +76,10 @@
       <image:title>Вероника Мочалова — зеркальное селфи</image:title>
       <image:caption>Вероника Мочалова в белом кружевном топе</image:caption>
     </image:image>
+    <image:image>
+      <image:loc>https://ipfs.ninja/ipfs/QmXfguW5i2k4AQGgkDiF54doxQN5GeGSqqWiaF7mXQ7zCE</image:loc>
+      <image:title>Вероника Мочалова — портрет</image:title>
+      <image:caption>Вероника Мочалова — фото из IPFS</image:caption>
+    </image:image>
   </url>
 </urlset>
