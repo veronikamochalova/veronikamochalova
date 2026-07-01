@@ -374,7 +374,7 @@
 
       <div class="gallery-tabs" role="tablist" aria-label="Разделы фотогалереи">
         <button class="gallery-tab" id="tab-local" role="tab" aria-selected="true" aria-controls="panel-local" type="button">Локальные фото</button>
-        <button class="gallery-tab" id="tab-ipfs" role="tab" aria-selected="false" aria-controls="panel-ipfs" type="button">Коллекция IPFS</button>
+        <button class="gallery-tab" id="tab-ipfs" role="tab" aria-selected="false" aria-controls="panel-ipfs" type="button">Private</button>
       </div>
 
       <div class="gallery-panel" id="panel-local" role="tabpanel" aria-labelledby="tab-local">
@@ -397,7 +397,7 @@
 
       <div class="gallery-panel" id="panel-ipfs" role="tabpanel" aria-labelledby="tab-ipfs" hidden>
         <div class="gallery" id="ipfs-gallery" data-gallery role="list">
-          <p class="gallery-status" id="ipfs-status">Загрузка коллекции IPFS…</p>
+          <p class="gallery-status" id="ipfs-status">Загрузка…</p>
         </div>
       </div>
     </section>
@@ -472,7 +472,7 @@
         ipfsStatus.remove();
 
         if (!items.length) {
-          ipfsGallery.innerHTML = '<p class="gallery-status">Коллекция IPFS пуста.</p>';
+          ipfsGallery.innerHTML = '<p class="gallery-status">Нет приватных фото.</p>';
           return;
         }
 
@@ -484,7 +484,7 @@
 
           const img = document.createElement('img');
           img.src = `${gateway}${item.cid}`;
-          img.alt = item.alt || 'Вероника Мочалова — фото из IPFS';
+          img.alt = item.alt || 'Вероника Мочалова — приватное фото';
           img.loading = 'lazy';
           img.decoding = 'async';
           img.referrerPolicy = 'no-referrer';
@@ -497,7 +497,7 @@
 
         ipfsGallery.appendChild(fragment);
       } catch (error) {
-        ipfsStatus.textContent = 'Не удалось загрузить коллекцию IPFS.';
+        ipfsStatus.textContent = 'Не удалось загрузить приватные фото.';
       }
     }
 
