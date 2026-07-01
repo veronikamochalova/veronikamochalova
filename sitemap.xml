@@ -8,8 +8,73 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-01.jpg</image:loc>
-      <image:title>Вероника Мочалова — портрет</image:title>
-      <image:caption>Официальный портрет Вероники Мочаловой</image:caption>
+      <image:title>Вероника Мочалова — студийный портрет</image:title>
+      <image:caption>Вероника Мочалова в белом студийном наряде</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-02.jpg</image:loc>
+      <image:title>Вероника Мочалова у розовой двери</image:title>
+      <image:caption>Вероника Мочалова в белом кружевном наряде</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-03.jpg</image:loc>
+      <image:title>Вероника Мочалова в платье Gucci</image:title>
+      <image:caption>Вероника Мочалова в синем платье на фоне цветов</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-04.jpg</image:loc>
+      <image:title>Вероника Мочалова в атласном платье</image:title>
+      <image:caption>Вероника Мочалова в белом атласном платье с синей сумкой</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-05.jpg</image:loc>
+      <image:title>Вероника Мочалова в жёлтом костюме</image:title>
+      <image:caption>Вероника Мочалова на уличной террасе кафе</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-06.jpg</image:loc>
+      <image:title>Вероника Мочалова в ресторане</image:title>
+      <image:caption>Вероника Мочалова за ужином в ресторане</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-07.jpg</image:loc>
+      <image:title>Вероника Мочалова на вечерней террасе</image:title>
+      <image:caption>Вероника Мочалова в чёрном пиджаке на террасе ресторана</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-08.jpg</image:loc>
+      <image:title>Вероника Мочалова в свитшоте DATRON</image:title>
+      <image:caption>Вероника Мочалова в белом свитшоте и джинсовой юбке</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-09.jpg</image:loc>
+      <image:title>Вероника Мочалова в автомобиле</image:title>
+      <image:caption>Вероника Мочалова за рулём автомобиля в городе</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-10.jpg</image:loc>
+      <image:title>Вероника Мочалова в розовом свитере</image:title>
+      <image:caption>Вероника Мочалова с прической в два пучка</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-11.jpg</image:loc>
+      <image:title>Вероника Мочалова в бомбере</image:title>
+      <image:caption>Вероника Мочалова в белой куртке и рваных джинсах</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-12.jpg</image:loc>
+      <image:title>Вероника Мочалова в интерьере с гортензиями</image:title>
+      <image:caption>Вероника Мочалова в кремовом боди в элегантной комнате</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-13.jpg</image:loc>
+      <image:title>Вероника Мочалова на яхте</image:title>
+      <image:caption>Вероника Мочалова на палубе яхты в белом наряде</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-14.jpg</image:loc>
+      <image:title>Вероника Мочалова — зеркальное селфи</image:title>
+      <image:caption>Вероника Мочалова в белом кружевном топе</image:caption>
     </image:image>
   </url>
 </urlset>
