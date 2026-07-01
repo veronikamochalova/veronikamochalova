@@ -402,7 +402,12 @@
 
       <div class="gallery-panel" id="panel-ipfs" role="tabpanel" aria-labelledby="tab-ipfs" hidden>
         <div class="gallery" id="ipfs-gallery" data-gallery role="list">
-          <p class="gallery-status" id="ipfs-status">Загрузка…</p>
+          <figure class="gallery-item" role="listitem"><img data-cid="QmXfguW5i2k4AQGgkDiF54doxQN5GeGSqqWiaF7mXQ7zCE" src="https://ipfs.io/ipfs/QmXfguW5i2k4AQGgkDiF54doxQN5GeGSqqWiaF7mXQ7zCE" alt="Вероника Мочалова — портрет на кровати" width="1256" height="840" decoding="async" referrerpolicy="no-referrer"></figure>
+          <figure class="gallery-item" role="listitem"><img data-cid="QmPj8qzNnkVZPtgXJVXHZSXw8ALiFxSbYoz19NppZ8UySo" src="https://ipfs.io/ipfs/QmPj8qzNnkVZPtgXJVXHZSXw8ALiFxSbYoz19NppZ8UySo" alt="Вероника Мочалова — приватное фото" width="888" height="1184" decoding="async" referrerpolicy="no-referrer"></figure>
+          <figure class="gallery-item" role="listitem"><img data-cid="QmRdHGpWNBLbmKps6BSJFvGDik3A1Z22cjgfaGkRWZVh1H" src="https://ipfs.io/ipfs/QmRdHGpWNBLbmKps6BSJFvGDik3A1Z22cjgfaGkRWZVh1H" alt="Вероника Мочалова — приватное фото" width="888" height="1184" decoding="async" referrerpolicy="no-referrer"></figure>
+          <figure class="gallery-item" role="listitem"><img data-cid="QmVsqYspoy8LcdqfqyRBRDGQM5aiXiSbCYXpQdkBVMPmxX" src="https://ipfs.io/ipfs/QmVsqYspoy8LcdqfqyRBRDGQM5aiXiSbCYXpQdkBVMPmxX" alt="Вероника Мочалова — приватное фото" width="1256" height="840" decoding="async" referrerpolicy="no-referrer"></figure>
+          <figure class="gallery-item" role="listitem"><img data-cid="QmcZE4XDpp8XXRgKadHLkNYuabWX6zxjPcR2phZ1hoe2Ag" src="https://ipfs.io/ipfs/QmcZE4XDpp8XXRgKadHLkNYuabWX6zxjPcR2phZ1hoe2Ag" alt="Вероника Мочалова — приватное фото" width="1016" height="1040" decoding="async" referrerpolicy="no-referrer"></figure>
+          <figure class="gallery-item" role="listitem"><img data-cid="QmWkMLQGnyHWRfUbZZfepdRPQykcb6dHYWiqoTkQoEka9G" src="https://ipfs.io/ipfs/QmWkMLQGnyHWRfUbZZfepdRPQykcb6dHYWiqoTkQoEka9G" alt="Вероника Мочалова — приватное фото" width="888" height="1184" decoding="async" referrerpolicy="no-referrer"></figure>
         </div>
       </div>
     </section>
@@ -425,8 +430,12 @@
     const tabIpfs = document.getElementById('tab-ipfs');
     const panelLocal = document.getElementById('panel-local');
     const panelIpfs = document.getElementById('panel-ipfs');
-    const ipfsGallery = document.getElementById('ipfs-gallery');
-    const ipfsStatus = document.getElementById('ipfs-status');
+    const ipfsGateways = [
+      'https://ipfs.io/ipfs/',
+      'https://cloudflare-ipfs.com/ipfs/',
+      'https://dweb.link/ipfs/',
+      'https://ipfs.ninja/ipfs/'
+    ];
 
     function openLightbox(img) {
       lightboxImg.src = img.src;
@@ -449,6 +458,18 @@
       panelIpfs.hidden = isLocal;
     }
 
+    function initPrivateImages() {
+      document.querySelectorAll('#ipfs-gallery img[data-cid]').forEach((img) => {
+        let gatewayIndex = 0;
+        img.addEventListener('error', () => {
+          gatewayIndex += 1;
+          if (gatewayIndex < ipfsGateways.length) {
+            img.src = `${ipfsGateways[gatewayIndex]}${img.dataset.cid}`;
+          }
+        });
+      });
+    }
+
     tabLocal.addEventListener('click', () => switchTab('local'));
     tabIpfs.addEventListener('click', () => switchTab('ipfs'));
 
@@ -466,47 +487,7 @@
       if (e.key === 'Escape') closeLightbox();
     });
 
-    async function loadIpfsCollection() {
-      try {
-        const response = await fetch('ipfs-collection.json');
-        if (!response.ok) throw new Error('config not found');
-        const data = await response.json();
-        const gateway = data.gateway || 'https://ipfs.ninja/ipfs/';
-        const items = Array.isArray(data.items) ? data.items : [];
-
-        ipfsStatus.remove();
-
-        if (!items.length) {
-          ipfsGallery.innerHTML = '<p class="gallery-status">Нет приватных фото.</p>';
-          return;
-        }
-
-        const fragment = document.createDocumentFragment();
-        items.forEach((item) => {
-          const figure = document.createElement('figure');
-          figure.className = 'gallery-item';
-          figure.setAttribute('role', 'listitem');
-
-          const img = document.createElement('img');
-          img.src = `${gateway}${item.cid}`;
-          img.alt = item.alt || 'Вероника Мочалова — приватное фото';
-          img.loading = 'lazy';
-          img.decoding = 'async';
-          img.referrerPolicy = 'no-referrer';
-          if (item.width) img.width = item.width;
-          if (item.height) img.height = item.height;
-
-          figure.appendChild(img);
-          fragment.appendChild(figure);
-        });
-
-        ipfsGallery.appendChild(fragment);
-      } catch (error) {
-        ipfsStatus.textContent = 'Не удалось загрузить приватные фото.';
-      }
-    }
-
-    loadIpfsCollection();
+    initPrivateImages();
   </script>
 </body>
 </html>
