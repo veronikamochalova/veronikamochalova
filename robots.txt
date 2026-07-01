@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://veronikamochalova.github.io/veronikamochalova/sitemap.xml

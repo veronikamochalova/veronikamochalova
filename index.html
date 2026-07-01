@@ -3,8 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Вероника Мочалова — личная страница">
-  <title>Вероника Мочалова</title>
+  <title>Вероника Мочалова — личная страница, фото и контакты</title>
+  <meta name="description" content="Официальная личная страница Вероники Мочаловой. Фотогалерея, информация обо мне и способы связи через Telegram и GitHub.">
+  <meta name="keywords" content="Вероника Мочалова, Veronika Mochalova, личная страница, фотогалерея, Telegram">
+  <meta name="author" content="Вероника Мочалова">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://veronikamochalova.github.io/veronikamochalova/">
+  <meta name="theme-color" content="#c9a87c">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Вероника Мочалова">
+  <meta property="og:title" content="Вероника Мочалова — личная страница">
+  <meta property="og:description" content="Личная страница Вероники Мочаловой с фотогалереей и контактами для связи.">
+  <meta property="og:url" content="https://veronikamochalova.github.io/veronikamochalova/">
+  <meta property="og:image" content="https://veronikamochalova.github.io/veronikamochalova/images/photo-01.jpg">
+  <meta property="og:image:alt" content="Вероника Мочалова — портрет">
+  <meta property="og:image:width" content="1440">
+  <meta property="og:image:height" content="1800">
+  <meta property="profile:first_name" content="Вероника">
+  <meta property="profile:last_name" content="Мочалова">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Вероника Мочалова — личная страница">
+  <meta name="twitter:description" content="Фотогалерея, информация обо мне и контакты Вероники Мочаловой.">
+  <meta name="twitter:image" content="https://veronikamochalova.github.io/veronikamochalova/images/photo-01.jpg">
+  <meta name="twitter:image:alt" content="Вероника Мочалова — портрет">
+
+  <link rel="preload" as="image" href="images/photo-01.jpg" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "name": "Вероника Мочалова — личная страница",
+    "url": "https://veronikamochalova.github.io/veronikamochalova/",
+    "description": "Личная страница Вероники Мочаловой с фотогалереей и контактами.",
+    "inLanguage": "ru",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Вероника Мочалова",
+      "alternateName": "Veronika Mochalova",
+      "image": "https://veronikamochalova.github.io/veronikamochalova/images/photo-01.jpg",
+      "url": "https://veronikamochalova.github.io/veronikamochalova/",
+      "sameAs": [
+        "https://t.me/nikkkkkaaaaaaaa",
+        "https://github.com/veronikamochalova"
+      ]
+    }
+  }
+  </script>
   <style>
     :root {
       --bg: #faf7f4;
@@ -141,6 +189,7 @@
     }
 
     .gallery-item {
+      margin: 0;
       position: relative;
       aspect-ratio: 3 / 4;
       border-radius: 16px;
@@ -224,55 +273,55 @@
   </style>
 </head>
 <body>
-  <div class="page">
+  <main class="page">
     <header>
-      <img class="avatar" src="images/photo-01.jpg" alt="Вероника Мочалова">
+      <img class="avatar" src="images/photo-01.jpg" alt="Вероника Мочалова — портрет на личной странице" width="180" height="180" fetchpriority="high">
       <h1>Вероника Мочалова</h1>
-      <p class="subtitle">Добро пожаловать на мою страницу</p>
-      <div class="links">
-        <a class="btn btn-primary" href="https://t.me/nikkkkkaaaaaaaa" target="_blank" rel="noopener noreferrer">Telegram</a>
-        <a class="btn" href="https://github.com/veronikamochalova" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </div>
+      <p class="subtitle">Добро пожаловать на мою личную страницу</p>
+      <nav class="links" aria-label="Контакты и социальные сети">
+        <a class="btn btn-primary" href="https://t.me/nikkkkkaaaaaaaa" target="_blank" rel="me noopener noreferrer" title="Написать Веронике Мочаловой в Telegram">Telegram</a>
+        <a class="btn" href="https://github.com/veronikamochalova" target="_blank" rel="me noopener noreferrer" title="Профиль Вероники Мочаловой на GitHub">GitHub</a>
+      </nav>
     </header>
 
-    <section>
-      <h2>Обо мне</h2>
+    <article id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Обо мне</h2>
       <div class="about">
         <p>
-          Привет! Меня зовут Вероника Мочалова. Это моя личная страница — здесь я делюсь
+          Привет! Меня зовут <strong>Вероника Мочалова</strong>. Это моя личная страница — здесь я делюсь
           фотографиями и немного рассказываю о себе.
         </p>
         <p>
           Люблю красивые моменты, стиль и путешествия. Если хотите связаться — напишите
-          мне в Telegram.
+          мне в <a href="https://t.me/nikkkkkaaaaaaaa" rel="me">Telegram</a>.
         </p>
       </div>
-    </section>
+    </article>
 
-    <section>
-      <h2>Фотогалерея</h2>
-      <div class="gallery" id="gallery">
-        <div class="gallery-item"><img src="images/photo-01.jpg" alt="Фото 1" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-02.jpg" alt="Фото 2" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-03.jpg" alt="Фото 3" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-04.jpg" alt="Фото 4" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-05.jpg" alt="Фото 5" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-06.jpg" alt="Фото 6" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-07.jpg" alt="Фото 7" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-08.jpg" alt="Фото 8" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-09.jpg" alt="Фото 9" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-10.jpg" alt="Фото 10" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-11.jpg" alt="Фото 11" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-12.jpg" alt="Фото 12" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-13.jpg" alt="Фото 13" loading="lazy"></div>
-        <div class="gallery-item"><img src="images/photo-14.jpg" alt="Фото 14" loading="lazy"></div>
+    <section id="gallery-section" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Фотогалерея Вероники Мочаловой</h2>
+      <div class="gallery" id="gallery" role="list">
+        <figure class="gallery-item" role="listitem"><img src="images/photo-01.jpg" alt="Вероника Мочалова — студийный портрет в белом наряде" width="1440" height="1800" loading="eager"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-02.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-03.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-04.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-05.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-06.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-07.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-08.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-09.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-10.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-11.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-12.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-13.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
+        <figure class="gallery-item" role="listitem"><img src="images/photo-14.jpg" alt="Вероника Мочалова — фото в галерее" width="1440" height="1800" loading="lazy"></figure>
       </div>
     </section>
 
     <footer>
-      <p>© 2026 Вероника Мочалова</p>
+      <p>© 2026 <span itemscope itemtype="https://schema.org/Person"><span itemprop="name">Вероника Мочалова</span></span></p>
     </footer>
-  </div>
+  </main>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" id="lightbox-close" aria-label="Закрыть">×</button>
@@ -285,7 +334,7 @@
     const lightboxClose = document.getElementById('lightbox-close');
 
     document.getElementById('gallery').addEventListener('click', (e) => {
-      const img = e.target.closest('.gallery-item img');
+      const img = e.target.closest('figure.gallery-item img');
       if (!img) return;
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
