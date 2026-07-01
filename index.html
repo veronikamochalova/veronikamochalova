@@ -208,6 +208,44 @@
       margin-top: 1rem;
     }
 
+    .gallery-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .gallery-tab {
+      padding: 0.65rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font: inherit;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, color 0.2s;
+    }
+
+    .gallery-tab:hover {
+      border-color: var(--accent);
+    }
+
+    .gallery-tab[aria-selected="true"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    .gallery-panel[hidden] {
+      display: none;
+    }
+
+    .gallery-status {
+      color: var(--muted);
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -333,21 +371,34 @@
 
     <section id="gallery-section" aria-labelledby="gallery-heading">
       <h2 id="gallery-heading">Фотогалерея Вероники Мочаловой</h2>
-      <div class="gallery" id="gallery" role="list">
-        <figure class="gallery-item" role="listitem"><img src="images/photo-02.jpg" alt="Вероника Мочалова в белом кружевном наряде у розовой двери" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-03.jpg" alt="Вероника Мочалова в синем платье Gucci на фоне цветов" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-04.jpg" alt="Вероника Мочалова в белом атласном платье с синей сумкой" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-05.jpg" alt="Вероника Мочалова в жёлтом костюме на уличной террасе кафе" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-06.jpg" alt="Вероника Мочалова за ужином в ресторане" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-07.jpg" alt="Вероника Мочалова в чёрном пиджаке на вечерней террасе ресторана" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-08.jpg" alt="Вероника Мочалова в белом свитшоте DATRON и джинсовой юбке" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-09.jpg" alt="Вероника Мочалова за рулём автомобиля в городе" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-10.jpg" alt="Вероника Мочалова в розовом свитере с прической в два пучка" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-11.jpg" alt="Вероника Мочалова в белой куртке-бомбере и рваных джинсах" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-12.jpg" alt="Вероника Мочалова в кремовом боди в комнате с гортензиями" width="800" height="1200" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-13.jpg" alt="Вероника Мочалова на палубе яхты в белом наряде" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="images/photo-14.jpg" alt="Вероника Мочалова в зеркальном селфи в белом кружевном топе" width="1440" height="1800" loading="lazy" decoding="async"></figure>
-        <figure class="gallery-item" role="listitem"><img src="https://ipfs.ninja/ipfs/QmXfguW5i2k4AQGgkDiF54doxQN5GeGSqqWiaF7mXQ7zCE" alt="Вероника Мочалова — портрет на кровати" width="1256" height="840" loading="lazy" decoding="async" referrerpolicy="no-referrer"></figure>
+
+      <div class="gallery-tabs" role="tablist" aria-label="Разделы фотогалереи">
+        <button class="gallery-tab" id="tab-local" role="tab" aria-selected="true" aria-controls="panel-local" type="button">Локальные фото</button>
+        <button class="gallery-tab" id="tab-ipfs" role="tab" aria-selected="false" aria-controls="panel-ipfs" type="button">Коллекция IPFS</button>
+      </div>
+
+      <div class="gallery-panel" id="panel-local" role="tabpanel" aria-labelledby="tab-local">
+        <div class="gallery" data-gallery role="list">
+          <figure class="gallery-item" role="listitem"><img src="images/photo-02.jpg" alt="Вероника Мочалова в белом кружевном наряде у розовой двери" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-03.jpg" alt="Вероника Мочалова в синем платье Gucci на фоне цветов" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-04.jpg" alt="Вероника Мочалова в белом атласном платье с синей сумкой" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-05.jpg" alt="Вероника Мочалова в жёлтом костюме на уличной террасе кафе" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-06.jpg" alt="Вероника Мочалова за ужином в ресторане" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-07.jpg" alt="Вероника Мочалова в чёрном пиджаке на вечерней террасе ресторана" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-08.jpg" alt="Вероника Мочалова в белом свитшоте DATRON и джинсовой юбке" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-09.jpg" alt="Вероника Мочалова за рулём автомобиля в городе" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-10.jpg" alt="Вероника Мочалова в розовом свитере с прической в два пучка" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-11.jpg" alt="Вероника Мочалова в белой куртке-бомбере и рваных джинсах" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-12.jpg" alt="Вероника Мочалова в кремовом боди в комнате с гортензиями" width="800" height="1200" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-13.jpg" alt="Вероника Мочалова на палубе яхты в белом наряде" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+          <figure class="gallery-item" role="listitem"><img src="images/photo-14.jpg" alt="Вероника Мочалова в зеркальном селфи в белом кружевном топе" width="1440" height="1800" loading="lazy" decoding="async"></figure>
+        </div>
+      </div>
+
+      <div class="gallery-panel" id="panel-ipfs" role="tabpanel" aria-labelledby="tab-ipfs" hidden>
+        <div class="gallery" id="ipfs-gallery" data-gallery role="list">
+          <p class="gallery-status" id="ipfs-status">Загрузка коллекции IPFS…</p>
+        </div>
       </div>
     </section>
 
@@ -365,21 +416,42 @@
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.getElementById('lightbox-close');
+    const tabLocal = document.getElementById('tab-local');
+    const tabIpfs = document.getElementById('tab-ipfs');
+    const panelLocal = document.getElementById('panel-local');
+    const panelIpfs = document.getElementById('panel-ipfs');
+    const ipfsGallery = document.getElementById('ipfs-gallery');
+    const ipfsStatus = document.getElementById('ipfs-status');
 
-    document.getElementById('gallery').addEventListener('click', (e) => {
-      const img = e.target.closest('figure.gallery-item img');
-      if (!img) return;
+    function openLightbox(img) {
       lightboxImg.src = img.src;
       lightboxImg.alt = img.alt;
       lightbox.classList.add('open');
       lightbox.setAttribute('aria-hidden', 'false');
-    });
+    }
 
     function closeLightbox() {
       lightbox.classList.remove('open');
       lightbox.setAttribute('aria-hidden', 'true');
       lightboxImg.src = '';
     }
+
+    function switchTab(activeTab) {
+      const isLocal = activeTab === 'local';
+      tabLocal.setAttribute('aria-selected', String(isLocal));
+      tabIpfs.setAttribute('aria-selected', String(!isLocal));
+      panelLocal.hidden = !isLocal;
+      panelIpfs.hidden = isLocal;
+    }
+
+    tabLocal.addEventListener('click', () => switchTab('local'));
+    tabIpfs.addEventListener('click', () => switchTab('ipfs'));
+
+    document.getElementById('gallery-section').addEventListener('click', (e) => {
+      const img = e.target.closest('figure.gallery-item img');
+      if (!img) return;
+      openLightbox(img);
+    });
 
     lightboxClose.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', (e) => {
@@ -388,6 +460,48 @@
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });
+
+    async function loadIpfsCollection() {
+      try {
+        const response = await fetch('ipfs-collection.json');
+        if (!response.ok) throw new Error('config not found');
+        const data = await response.json();
+        const gateway = data.gateway || 'https://ipfs.ninja/ipfs/';
+        const items = Array.isArray(data.items) ? data.items : [];
+
+        ipfsStatus.remove();
+
+        if (!items.length) {
+          ipfsGallery.innerHTML = '<p class="gallery-status">Коллекция IPFS пуста.</p>';
+          return;
+        }
+
+        const fragment = document.createDocumentFragment();
+        items.forEach((item) => {
+          const figure = document.createElement('figure');
+          figure.className = 'gallery-item';
+          figure.setAttribute('role', 'listitem');
+
+          const img = document.createElement('img');
+          img.src = `${gateway}${item.cid}`;
+          img.alt = item.alt || 'Вероника Мочалова — фото из IPFS';
+          img.loading = 'lazy';
+          img.decoding = 'async';
+          img.referrerPolicy = 'no-referrer';
+          if (item.width) img.width = item.width;
+          if (item.height) img.height = item.height;
+
+          figure.appendChild(img);
+          fragment.appendChild(figure);
+        });
+
+        ipfsGallery.appendChild(fragment);
+      } catch (error) {
+        ipfsStatus.textContent = 'Не удалось загрузить коллекцию IPFS.';
+      }
+    }
+
+    loadIpfsCollection();
   </script>
 </body>
 </html>
