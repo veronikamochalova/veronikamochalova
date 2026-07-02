@@ -268,6 +268,63 @@
       display: none;
     }
 
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(44, 36, 32, 0.06);
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: var(--accent);
+    }
+
+    .service-card.featured {
+      border-color: var(--accent);
+      background: linear-gradient(180deg, #fff 0%, #fdf9f5 100%);
+    }
+
+    .service-duration {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+
+    .service-price {
+      font-size: 1.65rem;
+      font-weight: 600;
+      color: var(--accent-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .service-rate {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .services-note {
+      margin-top: 1.25rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .services-cta {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
     .gallery-status {
       color: var(--muted);
       text-align: center;
@@ -402,9 +459,10 @@
     <section id="gallery-section" aria-labelledby="gallery-heading">
       <h2 id="gallery-heading">Фотогалерея Вероники Мочаловой</h2>
 
-      <div class="gallery-tabs" role="tablist" aria-label="Разделы фотогалереи">
+      <div class="gallery-tabs" role="tablist" aria-label="Разделы страницы">
         <button class="gallery-tab" id="tab-local" role="tab" aria-selected="true" aria-controls="panel-local" type="button">Локальные фото</button>
         <button class="gallery-tab" id="tab-ipfs" role="tab" aria-selected="false" aria-controls="panel-ipfs" type="button">Приватные фото</button>
+        <button class="gallery-tab" id="tab-services" role="tab" aria-selected="false" aria-controls="panel-services" type="button">Услуги</button>
       </div>
 
       <div class="gallery-panel" id="panel-local" role="tabpanel" aria-labelledby="tab-local">
@@ -423,6 +481,45 @@
           <figure class="gallery-item" role="listitem"><img src="images/photo-13.jpg" alt="Вероника Мочалова на палубе яхты в белом наряде" width="1440" height="1800" loading="lazy" decoding="async"></figure>
           <figure class="gallery-item" role="listitem"><img src="images/photo-14.jpg" alt="Вероника Мочалова в зеркальном селфи в белом кружевном топе" width="1440" height="1800" loading="lazy" decoding="async"></figure>
         </div>
+      </div>
+
+      <div class="gallery-panel" id="panel-services" role="tabpanel" aria-labelledby="tab-services" hidden>
+        <div class="services-grid">
+          <article class="service-card">
+            <p class="service-duration">1 час</p>
+            <p class="service-price">20 000 ₽</p>
+            <p class="service-rate">сопровождение</p>
+          </article>
+          <article class="service-card featured">
+            <p class="service-duration">2 часа</p>
+            <p class="service-price">35 000 ₽</p>
+            <p class="service-rate">17 500 ₽ / час</p>
+          </article>
+          <article class="service-card">
+            <p class="service-duration">3 часа</p>
+            <p class="service-price">50 000 ₽</p>
+            <p class="service-rate">16 700 ₽ / час</p>
+          </article>
+          <article class="service-card">
+            <p class="service-duration">4 часа</p>
+            <p class="service-price">65 000 ₽</p>
+            <p class="service-rate">16 250 ₽ / час</p>
+          </article>
+          <article class="service-card">
+            <p class="service-duration">5 часов</p>
+            <p class="service-price">75 000 ₽</p>
+            <p class="service-rate">15 000 ₽ / час</p>
+          </article>
+          <article class="service-card">
+            <p class="service-duration">Ночь</p>
+            <p class="service-price">100 000 ₽</p>
+            <p class="service-rate">до 10 часов</p>
+          </article>
+        </div>
+        <p class="services-note">Цены на сопровождение в Краснодаре. Для бронирования и уточнения деталей напишите в Telegram.</p>
+        <p class="services-cta">
+          <a class="btn btn-primary" href="https://t.me/nikkkkkaaaaaaaa" target="_blank" rel="me noopener noreferrer">Записаться в Telegram</a>
+        </p>
       </div>
 
       <div class="gallery-panel" id="panel-ipfs" role="tabpanel" aria-labelledby="tab-ipfs" hidden>
@@ -451,10 +548,20 @@
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
     const lightboxClose = document.getElementById('lightbox-close');
-    const tabLocal = document.getElementById('tab-local');
-    const tabIpfs = document.getElementById('tab-ipfs');
-    const panelLocal = document.getElementById('panel-local');
-    const panelIpfs = document.getElementById('panel-ipfs');
+    const tabs = {
+      local: {
+        tab: document.getElementById('tab-local'),
+        panel: document.getElementById('panel-local')
+      },
+      ipfs: {
+        tab: document.getElementById('tab-ipfs'),
+        panel: document.getElementById('panel-ipfs')
+      },
+      services: {
+        tab: document.getElementById('tab-services'),
+        panel: document.getElementById('panel-services')
+      }
+    };
     const ipfsGateways = [
       'https://ipfs.io/ipfs/',
       'https://cloudflare-ipfs.com/ipfs/',
@@ -476,11 +583,11 @@
     }
 
     function switchTab(activeTab) {
-      const isLocal = activeTab === 'local';
-      tabLocal.setAttribute('aria-selected', String(isLocal));
-      tabIpfs.setAttribute('aria-selected', String(!isLocal));
-      panelLocal.hidden = !isLocal;
-      panelIpfs.hidden = isLocal;
+      Object.entries(tabs).forEach(([name, { tab, panel }]) => {
+        const isActive = name === activeTab;
+        tab.setAttribute('aria-selected', String(isActive));
+        panel.hidden = !isActive;
+      });
     }
 
     function initPrivateImages() {
@@ -495,8 +602,9 @@
       });
     }
 
-    tabLocal.addEventListener('click', () => switchTab('local'));
-    tabIpfs.addEventListener('click', () => switchTab('ipfs'));
+    Object.entries(tabs).forEach(([name, { tab }]) => {
+      tab.addEventListener('click', () => switchTab(name));
+    });
 
     document.getElementById('gallery-section').addEventListener('click', (e) => {
       const img = e.target.closest('figure.gallery-item img');
