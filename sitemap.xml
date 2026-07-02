@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://veronikamochalova.github.io/veronikamochalova/</loc>
-    <lastmod>2026-07-01</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://veronikamochalova.github.io/veronikamochalova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://veronikamochalova.github.io/veronikamochalova/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://veronikamochalova.github.io/veronikamochalova/"/>
+    <lastmod>2026-07-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -105,6 +109,115 @@
       <image:loc>https://ipfs.ninja/ipfs/QmWkMLQGnyHWRfUbZZfepdRPQykcb6dHYWiqoTkQoEka9G</image:loc>
       <image:title>Вероника Мочалова — приватное фото</image:title>
       <image:caption>Вероника Мочалова — приватное фото</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://veronikamochalova.github.io/veronikamochalova/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://veronikamochalova.github.io/veronikamochalova/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://veronikamochalova.github.io/veronikamochalova/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://veronikamochalova.github.io/veronikamochalova/"/>
+    <lastmod>2026-07-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-01.jpg</image:loc>
+      <image:title>Veronika Mochalova — studio portrait</image:title>
+      <image:caption>Veronika Mochalova in white studio outfit</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-02.jpg</image:loc>
+      <image:title>Veronika Mochalova by pink door</image:title>
+      <image:caption>Veronika Mochalova in white lace outfit</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-03.jpg</image:loc>
+      <image:title>Veronika Mochalova in Gucci dress</image:title>
+      <image:caption>Veronika Mochalova in blue dress with flowers</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-04.jpg</image:loc>
+      <image:title>Veronika Mochalova in satin dress</image:title>
+      <image:caption>Veronika Mochalova in white satin dress with blue bag</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-05.jpg</image:loc>
+      <image:title>Veronika Mochalova in yellow suit</image:title>
+      <image:caption>Veronika Mochalova on outdoor café terrace</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-06.jpg</image:loc>
+      <image:title>Veronika Mochalova at restaurant</image:title>
+      <image:caption>Veronika Mochalova at dinner in a restaurant</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-07.jpg</image:loc>
+      <image:title>Veronika Mochalova on evening terrace</image:title>
+      <image:caption>Veronika Mochalova in black blazer on restaurant terrace</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-08.jpg</image:loc>
+      <image:title>Veronika Mochalova in DATRON sweatshirt</image:title>
+      <image:caption>Veronika Mochalova in white sweatshirt and denim skirt</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-09.jpg</image:loc>
+      <image:title>Veronika Mochalova in car</image:title>
+      <image:caption>Veronika Mochalova driving in the city</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-10.jpg</image:loc>
+      <image:title>Veronika Mochalova in pink sweater</image:title>
+      <image:caption>Veronika Mochalova with double bun hairstyle</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-11.jpg</image:loc>
+      <image:title>Veronika Mochalova in bomber jacket</image:title>
+      <image:caption>Veronika Mochalova in white jacket and ripped jeans</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-12.jpg</image:loc>
+      <image:title>Veronika Mochalova with hydrangeas</image:title>
+      <image:caption>Veronika Mochalova in cream bodysuit in elegant room</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-13.jpg</image:loc>
+      <image:title>Veronika Mochalova on yacht</image:title>
+      <image:caption>Veronika Mochalova on yacht deck in white outfit</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://veronikamochalova.github.io/veronikamochalova/images/photo-14.jpg</image:loc>
+      <image:title>Veronika Mochalova — mirror selfie</image:title>
+      <image:caption>Veronika Mochalova in white lace top</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ipfs.ninja/ipfs/QmXfguW5i2k4AQGgkDiF54doxQN5GeGSqqWiaF7mXQ7zCE</image:loc>
+      <image:title>Veronika Mochalova — portrait</image:title>
+      <image:caption>Veronika Mochalova — private photo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ipfs.ninja/ipfs/QmPj8qzNnkVZPtgXJVXHZSXw8ALiFxSbYoz19NppZ8UySo</image:loc>
+      <image:title>Veronika Mochalova — private photo</image:title>
+      <image:caption>Veronika Mochalova — private photo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ipfs.ninja/ipfs/QmRdHGpWNBLbmKps6BSJFvGDik3A1Z22cjgfaGkRWZVh1H</image:loc>
+      <image:title>Veronika Mochalova — private photo</image:title>
+      <image:caption>Veronika Mochalova — private photo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ipfs.ninja/ipfs/QmVsqYspoy8LcdqfqyRBRDGQM5aiXiSbCYXpQdkBVMPmxX</image:loc>
+      <image:title>Veronika Mochalova — private photo</image:title>
+      <image:caption>Veronika Mochalova — private photo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ipfs.ninja/ipfs/QmcZE4XDpp8XXRgKadHLkNYuabWX6zxjPcR2phZ1hoe2Ag</image:loc>
+      <image:title>Veronika Mochalova — private photo</image:title>
+      <image:caption>Veronika Mochalova — private photo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ipfs.ninja/ipfs/QmWkMLQGnyHWRfUbZZfepdRPQykcb6dHYWiqoTkQoEka9G</image:loc>
+      <image:title>Veronika Mochalova — private photo</image:title>
+      <image:caption>Veronika Mochalova — private photo</image:caption>
     </image:image>
   </url>
 </urlset>
